@@ -2,12 +2,13 @@
 
 module.exports = {
   url: "https://mraarif.github.io",
-  title: "Developer Diary",
+  title: "Aarif's Portfolio",
   tagline: "Fullstack Software Engineer with a bun",
   copyright: "© 2020 Aarif, All rights reserved",
   author: {
     name: "Aarif",
-    bio: "Fullstack Software Engineer with more than 4 years of professional experience",
+    bio:
+      "Fullstack Software Engineer with more than 4 years of professional experience",
     contacts: {
       linkedin: "https://www.linkedin.com/in/mraarif/",
       github: "https://github.com/mraarif",
