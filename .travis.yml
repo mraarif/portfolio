@@ -1,20 +1,12 @@
 language: node_js
-
-node_js:
-  - "stable"
-  - "lts/*"
-
-branches:
-  only:
-    - dev
-
-cache:
-  directories:
-  - node_modules
-
 before_script:
-  - "npm i -g gatsby-cli"
-  - "yarn"
-
-script:
-  - gatsby build
+  - npm install -g gatsby-cli
+  - yarn
+node_js:
+  - "10"
+deploy:
+  provider: script
+  script: yarn install && yarn run deploy
+  skip_cleanup: true
+  on:
+    branch: master
