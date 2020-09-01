@@ -1,7 +1,6 @@
 "use strict"
 
 const siteConfig = require("./config")
-console.log(siteConfig.labels)
 
 module.exports = {
   siteMetadata: {
