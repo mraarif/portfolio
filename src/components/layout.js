@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import "bootstrap/dist/css/bootstrap.css"
 import Header from "./header/header"
 import "./layout.css"
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
           >
             <main className="p-4">{children}</main>
             <footer className="text-center">
-              <hr />
+              <hr/>
               <p className="d-inline">
                 © {new Date().getFullYear()}{" "}
                 <a className="text-info" href="https://mraarif.github.io/">
