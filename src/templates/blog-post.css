@@ -4,7 +4,7 @@
 }
 
 .heading {
-  font-family: "Raleway";
+    font-family: "Raleway";
 }
 
 .sidebar {
@@ -12,13 +12,14 @@
 }
 
 
-
-
 @media only screen and (max-width: 850px) {
- .sidebar{display: none;}
- .post-page-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+    .sidebar {
+        display: none;
+    }
+
+    .post-page-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }

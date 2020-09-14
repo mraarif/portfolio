@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import "bootstrap/dist/css/bootstrap.css"
 import "../pages/index.css"
 
@@ -32,7 +32,7 @@ const Tag = ({ pageContext, data }) => {
               name={label.name}
               size={label.size}
               color={label.color}
-            />
+            />,
           )
         }
       })
@@ -55,7 +55,7 @@ const Tag = ({ pageContext, data }) => {
       />
       <div className="index-main">
         <div className="sidebar px-4 py-2">
-          <Sidebar />
+          <Sidebar/>
         </div>
 
         <div className="post-list-main">
@@ -100,50 +100,50 @@ Tag.propTypes = {
               title: PropTypes.string.isRequired,
             }),
           }),
-        }).isRequired
+        }).isRequired,
       ),
     }),
   }),
 }
 
 export const pageQuery = graphql`
-  query($tag: String) {
-    site {
-      siteMetadata {
-        title
-        author
-        labels {
-          tag
-          tech
-          name
-          size
-          color
+    query($tag: String) {
+        site {
+            siteMetadata {
+                title
+                author
+                labels {
+                    tag
+                    tech
+                    name
+                    size
+                    color
+                }
+            }
         }
-      }
-    }
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          excerpt(pruneLength: 200)
-          html
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM, YYYY")
-            tags
-          }
-          fields {
-            slug
-          }
+        allMarkdownRemark(
+            limit: 2000
+            sort: { fields: [frontmatter___date], order: DESC }
+            filter: { frontmatter: { tags: { in: [$tag] } } }
+        ) {
+            totalCount
+            edges {
+                node {
+                    excerpt(pruneLength: 200)
+                    html
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM, YYYY")
+                        tags
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
         }
-      }
     }
-  }
 `
 
 export default Tag
