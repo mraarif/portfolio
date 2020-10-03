@@ -14,7 +14,7 @@ module.exports = {
       github: "https://github.com/mraarif",
       stackoverflow:
         "https://stackoverflow.com/users/6027876/aarif?tab=profile",
-      twitter: "https://twitter.com/mraarif_2point0",
+      twitter: "https://twitter.com/mraarif_",
       instagram: "https://www.instagram.com/aarif.xniper/",
     },
   },
