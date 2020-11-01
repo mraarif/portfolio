@@ -23,6 +23,6 @@ and utilized `gh-pages` packages to build the content ready for a github pages s
 `gh-pages -d public -r <repo-url>`
 <br>
 `-d` argument specifies the target directory for `gh-pages` output and `-r` specifies the repo to push the 
-output content in. For my case I've generated a GitHub Token and specified it as part of the URL so this script
+output content in. For my case I've generated a GitHub Token (it's stored in travis secrets to get swapped while running the job) and specified it as part of the URL so this script
 can push the output content to my github pages [repository](https://github.com/mraarif/mraarif.github.io)
 every time I push something to `master` branch and want it get published automatically.
